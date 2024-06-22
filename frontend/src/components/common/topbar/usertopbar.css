@@ -8,6 +8,7 @@
   background-color: var(--white-color);
   border: 1px solid hsl(var(--border));
   overflow: hidden;
+  z-index: 1000;
 }
 
 .user-topbar .container {
@@ -37,15 +38,17 @@
   text-decoration: none;
   transition: all 0.3s ease;
   font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
 .user-topbar .valid-user a.active-link {
   background-color: var(--white-color);
   border: 1px solid hsl(var(--input));
   border-radius: 5px;
-  height: 40px;
-  padding: 0 15px;
-  margin-left: 10px;
+
+  padding: 0.5rem 1rem;
+
 }
 
 .user-topbar .right {
@@ -83,8 +86,8 @@
 }
 
 .user-topbar .light-btn {
-  background-color: var(--light-color);
-  color: var(--dark-color);
+  background-color: var(--middle-color);
+  color: black;
 }
 
 @media screen and (max-width: 768px) {
@@ -114,6 +117,17 @@
 }
 
 @media screen and (max-width: 480px) {
+  .user-topbar {
+    width: 100%;
+    display: flex;
+    height: 10vh;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    background-color: var(--white-color);
+    border: 1px solid hsl(var(--border));
+    overflow: hidden;
+  }
   .user-topbar .container {
       padding: 0 0.3rem;
   }
@@ -129,19 +143,34 @@
   .user-topbar .dark-btn,
   .user-topbar .light-btn {
       font-size: 0.7rem;
-      padding: 0.3rem 0.3rem;
+      padding: 0.6rem 0.3rem;
       margin-left: 0rem;
+      font-weight: 550;
+      height: max-content;
+
   }
-  .user-topbar .valid-user a,
-  .user-topbar .valid-user a.active-link  {
+  .user-topbar .valid-user a  {
     display: flex;
     align-items: center;
-    color: var(--dark-color);
+    color: var(--white-color);
+    background-color: var(--dark-color);
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 550;
     margin: 0 0 0 0;
-    padding: 0.3rem 0.3rem;
+    padding: 0.5rem 0.3rem;
+  }
+
+  .user-topbar .valid-user a.active-link  {
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: var(--middle-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 550;
+    margin: 0 0 0 0;
+    padding: 0.5rem 0.3rem;
   }
 
   .user-topbar img{

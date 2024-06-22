@@ -10,7 +10,7 @@ const Topbar = ({ logedinuser }) => {
     { link_to: "home", title: "Home", icon: HomeIcon },
     {
       link_to: "reading-list",
-      title: "ReadingList",
+      title: "Reading List",
       icon: BookmarkBorderIcon,
     },
     { link_to: "books", title: "Books", icon: LibraryBooksRoundedIcon },

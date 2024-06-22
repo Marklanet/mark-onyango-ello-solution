@@ -7,6 +7,11 @@ import ListItem from "../listitem/ListItem";
 import { GraphQLClient, gql } from "graphql-request";
 import { useMatch } from "react-router-dom";
 
+/*
+  This is a reusable dynamic component that displays data based on url
+  By coding it like this, we avoid rewriting mutiple components
+*/
+
 const BookList = ({ searchClick, books, addToPlayer }) => {
   const [initialBooks, setInitialBooks] = useState([]);
   const { readingList, setReadingList } = useContext(ReadingListContext);
@@ -15,12 +20,30 @@ const BookList = ({ searchClick, books, addToPlayer }) => {
   const matchReadingList = useMatch("/reading-list");
 
   const booksToDisplay = (data) => {
+    /*
+      Use Fisher-Yates shuffle algorithm
+      To randomize books, to enhance user experience
+    */
+    const shuffleArray = (array) => {
+      let currentIndex = array.length,
+        randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex],
+          array[currentIndex],
+        ];
+      }
+      return array;
+    };
+
     if (matchBooks) {
       setInitialBooks(data.books);
     } else if (matchReadingList) {
       setInitialBooks(readingList);
     } else {
-      setInitialBooks(data.books.slice(0, 12));
+      setInitialBooks(shuffleArray(data.books).slice(0, 12));
     }
   };
 
@@ -124,6 +147,11 @@ const BookList = ({ searchClick, books, addToPlayer }) => {
           <div className="no-results">
             <img src={searchicon} alt="Search Icon" />
             <p>No Matching Results</p>
+          </div>
+        ) : readingList.length === 0 && matchReadingList ? (
+          <div className="no-results">
+            <img src={searchicon} alt="Search Icon" />
+            <p>Empty Reading List</p>
           </div>
         ) : (
           <ul className="items-holder">

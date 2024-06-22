@@ -55,4 +55,9 @@
    .topbar h1{
     display: none;
    }
+   .topbar{
+    
+    height: 10vh;
+    
+}
 }

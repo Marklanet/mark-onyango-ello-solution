@@ -152,6 +152,14 @@
 
 @media only screen and (max-width: 768px) {
     .all-page {
+        
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .all-page {
         padding: 1rem 1rem;
         height: 85vh;
     }
@@ -165,7 +173,7 @@
     .all-page .left {
         width: 40%;
         height: 100%;
-        padding: 0 1rem 0 0;
+        padding: 0 0 0 1rem;
         position: relative;
     }
 }
@@ -224,4 +232,21 @@
     }
   
     
+}
+
+
+@media only screen and (max-width: 480px) {
+    .all-page .right.show-on-top {
+        position: fixed;
+        top: 11vh;
+        left: 0;
+        width: 95%;
+        margin-left: 2.5%;
+        height: 50vh; 
+        z-index: 20; 
+        background-color: white; 
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

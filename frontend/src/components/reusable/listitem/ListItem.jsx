@@ -6,6 +6,10 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
+/*
+  Reusable List Item Component
+  Avoids Code Redundancy
+*/
 const ListItem = ({
   item,
   addToReadingList,
@@ -17,7 +21,7 @@ const ListItem = ({
 
   return (
     <div className="list-item">
-      <img src={item.coverPhotoURL} alt="" />
+      <img src={item.coverPhotoURL} alt="" onClick={() => addToPlayer(item)} />
       <p>{item.title}</p>
       <span className="author">
         <Person3RoundedIcon className="icon" /> <p>{item.author}</p>

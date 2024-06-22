@@ -5,6 +5,7 @@ import Home from "../../../pages/home/Home";
 import Books from "../../../pages/books/Books";
 import ReadingList from "../../../pages/readinglist/ReadingList";
 import UserTopbar from "../../common/topbar/UserTopbar";
+import Footer from "../../common/footer/Footer";
 
 const TeacherView = () => {
   return (
@@ -19,6 +20,7 @@ const TeacherView = () => {
             <Route exact path="/books" element={<Books />} />
           </Routes>
         </div>
+        <Footer />
       </ReadingListProvider>
     </Router>
   );

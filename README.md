@@ -28,19 +28,28 @@ This project implements a teacher-facing UI for the Ello web viewer product, spe
 ### App Screenshots
 
 **1st Design**
-<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello21.jpg">
+<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello20.jpg">
 
 **2nd Design**
-<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello24.jpg">
+<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello21.jpg">
 
 **3rd Design**
-<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello25.jpg">
+<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello22.jpg">
 
 **4rth Design**
 <img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello23.jpg">
 
+**5th Design**
+<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello24.jpg">
+
+**6th Design**
+<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello25.jpg">
+
 **Mobile Design**
-<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello29.jpg">
+<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello26.jpg">
+
+**Mobile Design**
+<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="./frontend/public/designs/ello27.jpg">
 
 ## Getting Started
 
